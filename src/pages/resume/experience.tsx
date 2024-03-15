@@ -17,7 +17,7 @@ export const ResumeExperience = (
             <div className="resumeSectionHeader coral"><b>Experience</b></div>
             {experiences.map(experience => {
                 return (
-                    <div className="resumeExperiencePosition">
+                    <div key={experience.company} className="resumeExperiencePosition">
                         <div className="resumeExperienceTitle"><b>{experience.company}, <i>{experience.location} - {experience.position}</i></b></div>
                         <div className="resumeExperienceDate gray">{experience.date}</div>
                         <div className="resumeExperienceDetails gray">{experience.details}</div>

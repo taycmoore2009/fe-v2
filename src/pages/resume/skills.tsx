@@ -6,9 +6,9 @@ export const ResumeSkills = (
     return (
         <div>
             <div className="resumeSectionHeader coral"><b>Skills</b></div>
-            {skills.map(skill => {
+            {skills.map((skill, index) => {
                 return (
-                    <div className="resumeSkillPosition gray">{skill}</div>
+                    <div key={index} className="resumeSkillPosition gray">{skill}</div>
                 )
             })}
         </div>
