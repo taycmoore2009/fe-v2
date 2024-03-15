@@ -3,6 +3,7 @@ import React from 'react';
 import { ResumeExperience } from './experience';
 import { ResumeSkills } from './skills';
 import { ResumeReachMe } from './reachMe';
+import { ResumeAwards } from './awards';
 
 /*--
 To Do:
@@ -45,6 +46,25 @@ const skills = [
   'MySQL, postgresSQL, MongoDB',
   'Restful and SOAP experience',
   'Quick learner on everything else'
+];
+
+const awards = [
+  {
+    title: '#2 overall hackathon winner',
+    description: 'Our hackathons were judged on three categories; usefulness, innovation, presentation. The spooky skelly boys took second in each category out of 20 teams'
+  },
+  {
+    title: 'Best at standup',
+    description: 'Recognized to persons that distinguishes the best stand up etiquette; including timeliness, participation, and having good vibes'
+  },
+  {
+    title: 'Best office dog',
+    description: 'You just have to meet them. You’ll understand why.'
+  },
+  {
+    title: '2018 Soccer Golf Camp',
+    description: 'Awarded to top scorer in the company wide 2018 Soccer Golf tournament'
+  },
 ]
 
 export const Resume = () => {
@@ -65,6 +85,7 @@ export const Resume = () => {
           </div>
           <div className="resumeRight">
             <ResumeSkills skills={skills}/>
+            <ResumeAwards awards={awards} />
           </div>
         </div>
         <div className="resume card">

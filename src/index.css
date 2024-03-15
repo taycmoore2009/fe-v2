@@ -11,9 +11,9 @@ code {
 }
 .contentWrapper {
   display: flex;
-  height: calc(100vh - 44px);
+  flex-direction: column;
+  flex-wrap: nowrap;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 /* Common */
@@ -77,7 +77,7 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
-  height: 954px;
+  height: 756px;
   width: 715px;
   margin: 20px auto;
 }
@@ -122,6 +122,10 @@ code {
 .resumeSkillPosition {
   font-size: 14px;
   padding: 12px 0;
+}
+.resumeAwardsPosition {
+  font-size: 14px;
+  margin: 8px 0;
 }
 .reachMe {
   font-size: 14px;
