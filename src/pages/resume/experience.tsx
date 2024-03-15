@@ -1,24 +1,25 @@
 import React from 'react';
 
 export const ResumeExperience = (
-    {experiences}:
+    {experiences, title}:
     {
         experiences: {
-            company: string;
-            location: string;
-            position: string;
-            date: string;
+            title: string;
+            location?: string;
+            position?: string;
+            date?: string;
             details?: string;
         }[];
+        title: string;
     }
 ) => {
     return (
         <div className="resumeExperience">
-            <div className="resumeSectionHeader coral"><b>Experience</b></div>
+            <div className="resumeSectionHeader coral"><b>{title}</b></div>
             {experiences.map(experience => {
                 return (
-                    <div key={experience.company} className="resumeExperiencePosition">
-                        <div className="resumeExperienceTitle"><b>{experience.company}, <i>{experience.location} - {experience.position}</i></b></div>
+                    <div key={experience.title} className="resumeExperiencePosition">
+                        <div className="resumeExperienceTitle"><b>{experience.title}, <i>{experience.location} - {experience.position}</i></b></div>
                         <div className="resumeExperienceDate gray">{experience.date}</div>
                         <div className="resumeExperienceDetails gray">{experience.details}</div>
                     </div>
